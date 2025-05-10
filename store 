@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria Footwear - Step into Tomorrow</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 20px 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ddd;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #222 0%, #111 100%);
+            padding: 100px 40px;
+            text-align: center;
+            margin-top: 80px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #00ffcc;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #00ffcc;
+            color: #111;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .hero button:hover {
+            background-color: #00b386;
+            color: #eee;
+        }
+
+        .products-section {
+            padding: 60px 40px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #333;
+        }
+
+        .product-image {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.5em;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: #00ffcc;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product-button {
+            background-color: transparent;
+            color: #00ffcc;
+            border: 2px solid #00ffcc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .product-button:hover {
+            background-color: #00ffcc;
+            color: #111;
+        }
+
+        footer {
+            background-color: #333;
+            color: #bbb;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        /* Futuristic Animations */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 5px #00ffcc;
+            }
+            50% {
+                box-shadow: 0 0 15px #00ffcc;
+            }
+            100% {
+                box-shadow: 0 0 5px #00ffcc;
+            }
+        }
+
+        .logo {
+            animation: pulse 2s infinite alternate;
+        }
+
+        .hero button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.4), transparent);
+            transition: left 0.4s ease-in-out;
+        }
+
+        .hero button:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Aetheria</div>
+        <nav>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Featured</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Engineered for the Future of Footwear</h1>
+        <p>Experience the next evolution in men's shoes. Cutting-edge design meets unparalleled comfort and performance.</p>
+        <button>Explore the Collection</button>
+    </section>
+
+    <section class="products-section">
+        <h2>Featured Footwear</h2>
+        <div class="products-grid" id="productGrid">
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aetheria Footwear. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const productGrid = document.getElementById('productGrid');
+
+        const products = [
+            {
+                name: "Quantum Leap Runner",
+                price: "$199.99",
+                image: "https://via.placeholder.com/400/3498db/ecf0f1?Text=Quantum+Runner",
+                description: "Experience gravity-defying comfort with our advanced kinetic energy system."
+            },
+            {
+                name: "CyberStride Tactical",
+                price: "$249.50",
+                image: "https://via.placeholder.com/400/e74c3c/ecf0f1?Text=CyberStride",
+                description: "Built for urban exploration with reinforced exoskeleton and adaptive grip."
+            },
+            {
+                name: "AeroKnit Velocity",
+                price: "$175.00",
+                image: "https://via.placeholder.com/400/2ecc71/ecf0f1?Text=AeroKnit",
+                description: "Lightweight and breathable with seamless construction for ultimate agility."
+            },
+            {
+                name: "MagnaGrip Explorer",
+                price: "$210.75",
+                image: "https://via.placeholder.com/400/9b59b6/ecf0f1?Text=MagnaGrip",
+                description: "Engineered for all terrains with magnetic locking laces and durable outer shell."
+            },
+            {
+                name: "NovaForm Adapt",
+                price: "$225.99",
+                image: "https://via.placeholder.com/400/f39c12/ecf0f1?Text=NovaForm",
+                description: "Intelligent footwear that molds to your foot for personalized support and comfort."
+            },
+            {
+                name: "Titanium Tread",
+                price: "$280.00",
+                image: "https://via.placeholder.com/400/34495e/ecf0f1?Text=Titanium+Tread",
+                description: "Unbreakable durability meets sophisticated style. Crafted with aerospace-grade alloys."
+            }
+        ];
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.classList.add('product-card');
+
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('product-image-container');
+            const image = document.createElement('img');
+            image.classList.add('product-image');
+            image.src = product.image;
+            image.alt = product.name;
+            imageContainer.appendChild(image);
+            card.appendChild(imageContainer);
+
+            const details = document.createElement('div');
+            details.classList.add('product-details');
+
+            const title = document.createElement('h3');
+            title.classList.add('product-title');
+            title.textContent = product.name;
+            details.appendChild(title);
+
+            const price = document.createElement('p');
+            price.classList.add('product-price');
+            price.textContent = product.price;
+            details.appendChild(price);
+
+            const button = document.createElement('button');
+            button.classList.add('product-button');
+            button.textContent = 'View Details';
+            details.appendChild(button);
+
+            card.appendChild(details);
+            return card;
+        }
+
+        products.forEach(product => {
+            const productCard = createProductCard(product);
+            productGrid.appendChild(productCard);
+        });
+    </script>
+</body>
+</html>
